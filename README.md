@@ -1,6 +1,7 @@
 # price-checker
  
 # Prereq
+
 pip install -U selenium
 -------------------------
 pip install chromedriver
