@@ -28,7 +28,7 @@ def main(args):
     # options.add_argument('disable-infobars')
     # options.add_argument("--disable-extensions")
 
-    driver = webdriver.Chrome(executable_path="chromedriver")
+    driver = webdriver.Chrome(executable_path="chromedriver", options=options)
     try:
         print(datetime.datetime.now())
         for url, price in urls.items():
