@@ -1,4 +1,5 @@
 import datetime
+import json
 import os
 import sys
 from urllib.request import urlopen
@@ -20,6 +21,11 @@ urls = {
 
 
 def main(args):
+
+    with open("microcenter.json") as f:
+        raw_urls=f.read()
+
+    urls = json.loads(raw_urls)
     options = Options()
     options.add_argument("--headless") # Runs Chrome in headless mode.
     #options.add_argument('--no-sandbox') # Bypass OS security model
